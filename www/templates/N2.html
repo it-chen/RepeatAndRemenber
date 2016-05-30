@@ -1,0 +1,30 @@
+<ion-view view-title="N2">
+  <ion-content class="padding">
+    <ion-side-menus>
+      <!-- 中间内容 -->
+      <ion-side-menu-content  on-swipe-down="onDragDown()" on-swipe-up="onDragUp()">
+        {{item.id}}
+        {{item.name}}
+        {{item.full}}
+      </ion-side-menu-content>
+
+      <!-- 左侧菜单 -->
+      <ion-side-menu side="left">
+        <header class="bar bar-header bar-stable">
+          <h1 class="title">Left</h1>
+        </header>
+        <ion-content class="has-header">
+          <ion-list>
+            <ion-item nav-clear menu-close href="#/tab/N2/0">
+              Search
+            </ion-item>
+            <ion-item nav-clear menu-close href="#/tab/N2/1">
+              Search
+            </ion-item>
+          </ion-list>
+        </ion-content>
+      </ion-side-menu>
+
+    </ion-side-menus>
+  </ion-content>
+</ion-view>

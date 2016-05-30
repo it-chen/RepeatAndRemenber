@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+	<item>
+		<id>1</id>
+		<name>aa</name>
+		<full>aa bb cc</full>
+	</item>
+	<item>
+		<id>2</id>
+		<name>bb</name>
+		<full>bb cc dd</full>
+	</item>
+</items>
