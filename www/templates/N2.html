@@ -3,28 +3,32 @@
     <ion-side-menus>
       <!-- 中间内容 -->
       <ion-side-menu-content  on-swipe-down="onDragDown()" on-swipe-up="onDragUp()">
-        {{item.id}}
-        {{item.name}}
-        {{item.full}}
+        <div class="list card">
+          <div class="item item-avatar">
+            <h2>{{item.id}}</h2>
+          </div>
+          <div class="item item-text-wrap" style="min-height:200px;font-size:30px">
+            {{item.name}}
+          </div>
+          <a class="item item-icon-left assertive">
+            <button class="button button-big button-assertive" ng-click="showPopup()">show window</button>
+            <button class="button button-big button-positive" ng-click="onDragUp()">Small Button</button>
+          </a>
+        </div>
       </ion-side-menu-content>
-
       <!-- 左侧菜单 -->
       <ion-side-menu side="left">
         <header class="bar bar-header bar-stable">
           <h1 class="title">Left</h1>
         </header>
         <ion-content class="has-header">
-          <ion-list>
-            <ion-item nav-clear menu-close href="#/tab/N2/0">
-              Search
-            </ion-item>
-            <ion-item nav-clear menu-close href="#/tab/N2/1">
+          <ion-list ng-repeat="pageno in abc">
+            <ion-item nav-clear menu-close href="#/tab/N2/{{pageno}}">
               Search
             </ion-item>
           </ion-list>
         </ion-content>
       </ion-side-menu>
-
     </ion-side-menus>
   </ion-content>
 </ion-view>
