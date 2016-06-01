@@ -7,24 +7,24 @@
           <div class="item item-avatar">
             <h2>{{item.id}}</h2>
           </div>
-          <div class="item item-text-wrap" style="min-height:200px;font-size:30px">
+          <div class="item item-text-wrap" style="min-height:200px;font-size:30px;line-height:40px">
             {{item.name}}
           </div>
           <a class="item item-icon-left assertive">
-            <button class="button button-big button-assertive" ng-click="showPopup()">show window</button>
-            <button class="button button-big button-positive" ng-click="onDragUp()">Small Button</button>
+            <button class="button button-big button-assertive" ng-click="showPopup()">跪求解释</button>
+            <button class="button button-big button-positive" ng-click="onDragUp()">这个老子会</button>
           </a>
         </div>
       </ion-side-menu-content>
       <!-- 左侧菜单 -->
       <ion-side-menu side="left">
         <header class="bar bar-header bar-stable">
-          <h1 class="title">Left</h1>
+          <h1 class="title">单元选择</h1>
         </header>
         <ion-content class="has-header">
           <ion-list ng-repeat="pageno in abc">
             <ion-item nav-clear menu-close href="#/tab/N2/{{pageno}}">
-              Search
+              第{{pageno+1}}单元
             </ion-item>
           </ion-list>
         </ion-content>

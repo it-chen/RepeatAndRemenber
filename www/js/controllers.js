@@ -17,14 +17,14 @@ angular.module('starter.controllers', [])
   };
 
   $scope.onDragUp = function(){
-    if(parseInt($scope.itemNo)<9){
+    if(parseInt($scope.itemNo)<10){
       $scope.itemNo = parseInt($scope.itemNo)+1;
       $scope.item = Units.get($scope.unitNo,$scope.itemNo);
     }
   }
 
   $scope.onDragDown = function(){
-    if(parseInt($scope.itemNo)>0){
+    if(parseInt($scope.itemNo)>1){
       $scope.itemNo = parseInt($scope.itemNo)-1;
       $scope.item = Units.get($scope.unitNo,$scope.itemNo);
     }
@@ -35,14 +35,14 @@ angular.module('starter.controllers', [])
 
   // 自定义弹窗
   var myPopup = $ionicPopup.show({
-   template:'<div class="card"><div class="item item-divider">卡片头</div>'+
-            '<div class="item item-text-wrap">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</div>'+
-            '<div class="item item-divider">卡片底</div></div>',
-   title: 'Enter Wi-Fi Password',
+   template:'<div class="card"><div class="item item-divider">{{item.name}}</div>'+
+            '<div class="item item-text-wrap">中文：{{item.zhongwen}}<br/><br/>接续：{{item.jiefa}}<br/><br/>例句：{{item.liju}}<br/><br/>例句翻译：{{item.lijufanyi}}<br/><br/>'+
+            '<div ng-if="item.beizhu!=\'\'">备注：{{item.beizhu}}<br/></div></div>',
+   title: '详细解释',
    scope: $scope,
    buttons: [
      {
-       text: '<b>Save</b>',
+       text: '<b>懂了！</b>',
        type: 'button-positive',
      },
    ]
